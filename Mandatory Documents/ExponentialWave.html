@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+
+    <html itemscope itemtype="http://schema.org/QAPage" class="">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <script src="https://cdn.sstatic.net/js/third-party/citation-helper.js?v=58f0692a3d95"></script>
+                    <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], scale: 130, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                    TeX: { 
+                        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+                    messageStyle: "none"
+            });
+            </script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    </head>
+        
+
+<body class="question-page new-topbar">
+
+<!--style type="text/css">p {font-size:30px;}</style-->
+
+
+<p>Let,<br>
+$\rightarrow$Function $G(t) = e^t \rightarrow Equation 1$<br>
+$\rightarrow$Function $F$ is a $\sin$ function of Length of $G(t)$, <br>
+Such that $F(Length(G(t)))=\sin (Length(G(t))) \rightarrow Equation 2$ <br>
+$\rightarrow$Value of $F(Length(G(t)))$ will be plotted on a line <br>
+which is $\bot$ to tangent at point $(t, G(t))$<br><br>
+<h3><b>$\rightarrow$Our first task is to derive an equation for </b>$Length(G(t))$</h3>
+$Length(G(t))$ can be derived with following formula.<br> 
+(Kindly let me know if you want to understand a rational behind this formula)<br>
+$$Length(G(t))=\int_{0}^{t} \biggl(\sqrt{{\biggl(\frac{d(G(t))}{dt}\biggr)}^2+1}\biggr)dt$$<br>
+Since $G(t) = e^t$, then $\frac{d(G(t))}{dt}=e^t$, So length Formula will become, 
+$$Length(G(t))=\int_{0}^{t} \biggl(\sqrt{{e^{2t}}+1}\biggr)dt$$<br>
+Let $P(t)=\sqrt{{e^{2t}}+1}$, Such that $Length(G(t))=\int_{0}^{t} P(t)dt$<br><br>
+After evaluating an integral, we will get<br>
+$Length(G(t))=+P(t)+\frac{1}{2}\log\frac{P(t)-1}{P(t)+1}-P(0)-\frac{1}{2}\log\frac{P(0)-1}{P(0)+1} \rightarrow Equation 3$<br><br>
+Since we have got the equation for $Length(G(t))$, <br>
+We can evaluate $F(Length(G(t)))=\sin (Length(G(t)))$<br><br></p>
+
+
+<!--*****************************************************************-->
+
+<p>
+    <h3><b>$\rightarrow$ Our second task is to find the equation of point $(x,y)$, Such that point $(x,y)$ is present on line which is $\bot$ to tangent <br> at point $(t, G(t))$ and displacement of point $(x,y)$ from $(t, G(t))$ should be equal to $F(Length(G(t)))$</b></h3>
+    Since, $G(t) = e^t$, We can say point $(t, G(t))$ is same as point $(t, e^t)$<br><br>
+    <b>Let's first find the equation of line which is $\bot$ to tangent at point $(t, e^t)$</b><br>
+    The slope of a tangent at $(t, e^t)$ is given by $\frac{d(e^t)}{dt}=e^t$<br>
+    We know that product of slope of two lines $\bot$ to each other is $-1$, based on that we can say, slope of line $\bot$ to tangent at $(t, e^t)$ will be given by $-e^{-t}$ <br>
+    equation of point $(x,y)$ on line $\bot$ to tangent at $(t, e^t)$ and passing through point $(t, e^t)$ is given by, <br>
+    $\frac{y-e^t}{x-t}=-e^{-t} \rightarrow Equation 4$<br><br>
+    <b>We also want that the dispalcement between point $(x,y)$ from $(t, e^t)$ should be equal to $F(Length(G(t)))$, equation for the same is</b><br>
+    $\sqrt{{(x-t)}^2+{(y-e^t)}^2}=F(Length(G(t))) \rightarrow Equation 5$<br><br>
+    After using Equation $4$ & $5$, we will get below equation for point $(x,y)$
+</p>
+
+<div style="background-color:#DCDCDC; padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-style: solid;
+    width: 650px;">$x=-\frac {F(Length(G(t)))}{P(t)}e^t+t$<br>
+    $y=+\frac {F(Length(G(t)))}{P(t)}+e^t$<br><br>
+    where, <br>
+    $G(t) = e^t$ <br>
+    $P(t)=\sqrt{{e^{2t}}+1}$ <br>
+    $Length(G(t))=+P(t)+\frac{1}{2}\log\frac{P(t)-1}{P(t)+1}-P(0)-\frac{1}{2}\log\frac{P(0)-1}{P(0)+1}$ <br>
+    $F(Length(G(t)))=\sin (Length(G(t)))$
+     
+</div>
+
+<p>Now, using above equations, we can evaluate point $(x, y)$ for different values of $t$. After plotting points $(x, y)$ on x-y plain, we will get a very beautiful and interesting shape as can be seen below. A sin wave on exponential function.</p>
+<div>
+    <img src="SinExpo.png" alt="" style="width:573px;height:850px;">
+</div>
+
+
+</body>
+</html>
